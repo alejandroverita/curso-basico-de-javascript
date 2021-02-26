@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Piedra, papel y tijeras</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Piedra, papel y tijeras</h1>
+    </header>
+
+
+    <section id="empezar" class="start">
+        <div class="start__container">
+            <input type="button" value="Empezar a jugar" onclick="empezar()">
+        </div>
+    </section>
+
+
+    <section id="opciones" class="options hidden">
+        <nav class="options__container">
+            <input id="elegirPiedra" class="options__container--input" type="button" onclick="eleccion()" value="Piedra">
+            <input id="elegirPapel" class="options__container--input" type="button" onclick="eleccion()" value="Papel">
+            <input id="elegirTijeras" class="options__container--input" type="button" onclick="eleccion()" value="Tijeras">
+        </nav>
+    </section>
+
+    <section id="cartelFinal" class="final hidden">
+        <div class="final__container">
+            <p id="final" class="final__container--title"></p>
+            <input class="final__container--input" type="button" value="Dale de nuevo!!" onclick="empezar()">
+        </div>
+    </section>
+
+    <section class="container">
+        <figure class="container-figure">
+            <div id="piedraPlayer1" class="container-figure--img hidden">
+                <p>Tú</p>
+                <img src="piedra.jpg" alt="piedra">
+                <p>Piedra</p>
+            </div>
+            <div id="papelPlayer1" class="container-figure--img hidden">
+                <p>Tú</p>
+                <img src="paper.png" alt="papel">
+                <p>Papel</p>
+            </div>
+            <div id="tijerasPlayer1" class="container-figure--img hidden">
+                <p>Tú</p>
+                <img src="scissor.jpg" alt="tijeras">
+                <p>Tijera</p>
+            </div>
+        </figure>      
+        <figure class="container-figure">
+            <div id="piedraPlayer2" class="container-figure--img hidden">
+                <p>Rival</p>
+                <img src="piedra.jpg" alt="piedra">
+                <p>Piedra</p>
+            </div>
+            <div id="papelPlayer2" class="container-figure--img hidden">
+                <p>Rival</p>
+                <img src="paper.png" alt="papel">
+                <p>Papel</p>
+            </div>
+            <div id="tijerasPlayer2" class="container-figure--img hidden">
+                <p>Rival</p>
+                <img src="scissor.jpg" alt="tijera">
+                <p>Tijera</p>
+            </div>
+        </figure>   
+    </section>
+
+
+    <footer class="footer">
+        <p id="footer__counter" class="footer__counter">Contador</p>
+    </footer>
+    <script src="juego.js"></script>
+</body>
+</html>
